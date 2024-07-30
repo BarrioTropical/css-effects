@@ -1,0 +1,54 @@
+/* main */
+*{
+    --black: #0b0b0b;
+    --white: #fff;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+}
+
+/* container */
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* menu item */
+li{
+    display: inline-block;
+}
+
+li a{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    font-weight: 100 ;
+    font-size: 28px;
+
+    padding: 0 20px;
+}
+
+/* effect */
+.cool-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+
+    background: var(--white);
+    border-radius: 2px;
+
+    transition: width .2s;
+}
+
+.cool-link:hover::after{
+    width: 100%;
+    transition: width .2s;
+}
